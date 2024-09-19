@@ -63,6 +63,9 @@ int main(void)
 
 void flash_leds()
 {
+	HLCD_VoidLcdClear();
+
+HLCD_u8WriteStr("Flash Mode");
     while (1)
     {
         MDIO_u8SetPortValue(MDIO_PORTB, 0xFF); // Turn on all LEDs
@@ -84,6 +87,8 @@ void flash_leds()
 
 void shift_left()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Shift Left Mode");
     while (1)
     {
         // Iterate from bit 0 to bit 7
@@ -105,6 +110,8 @@ void shift_left()
 
 void shift_right()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Shift Right Mode");
     while (1)
     {
         // Iterate from bit 7 to bit 0
@@ -125,6 +132,8 @@ void shift_right()
 }
 void converge_leds()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Coverge Mode");
     while (1)
     {
         for (u8 i = 0; i < 4; i++)
@@ -144,6 +153,8 @@ void converge_leds()
 
 void diverge_leds()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Diverge Mode");
     while (1)
     {
         for (int8_t i = 3; i >= 0; i--)
@@ -163,6 +174,8 @@ void diverge_leds()
 
 void ping_pong()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Ping Pong Mode");
     while (1)
     {
         // Moving right
@@ -189,6 +202,8 @@ void ping_pong()
 
 void snake_effect()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Snake Effect Mode");
     while (1)
     {
         // Snake moving right
@@ -215,6 +230,8 @@ void snake_effect()
 
 void converge_diverge_leds()
 {
+	HLCD_VoidLcdClear();
+	HLCD_u8WriteStr("Converge Diverge Mode");
     while (1)
     {
         // Converging LEDs
